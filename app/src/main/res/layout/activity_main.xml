@@ -33,11 +33,13 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/button"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
 
-                    android:text="Г" />
+                    android:background="@drawable/ic_location"
+                    android:onClick="update_weather" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -48,28 +50,32 @@
 
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/curent_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
                         android:text="06.11.2019"
                         android:textColor="@color/white"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/current_location"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
                         android:text="Москва"
                         android:textColor="@color/white"
-                        android:textSize="30sp" />
+                        android:textSize="36sp" />
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/curretn_temp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_thin"
                         android:text="17°"
                         android:textColor="@color/white"
-                        android:textSize="50sp" />
+                        android:textSize="64sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -79,9 +85,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
+
                 android:background="@drawable/white_radius_angles"
                 android:paddingRight="10dp"
                 android:scrollbars="none"
@@ -96,7 +103,8 @@
                     android:orientation="horizontal"
                     android:paddingLeft="10dp"
                     android:paddingTop="20dp"
-                    android:paddingRight="20dp">
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp">
 
                     <LinearLayout
 
@@ -113,34 +121,35 @@
 
                         <ImageView
                             android:id="@+id/imageView25"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="TODO"
-                            app:srcCompat="@drawable/cloudy" />
+                            app:srcCompat="@drawable/ic_cloudy" />
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/temp0"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="13°"
                             android:textAlignment="center" />
 
+
                     </LinearLayout>
 
+
                     <View
-                        android:layout_width="2dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="153dp"
-                        android:background="#e6e6e6" />
+                        android:layout_marginTop="4dp"
+                        android:layout_width="2px"
+                        android:background="@color/blue"
+                        android:layout_height="80dp"
+                        />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="5dp"
                         android:orientation="vertical"
+                        android:paddingLeft="5dp"
                         android:paddingRight="5dp">
 
                         <TextView
@@ -150,34 +159,34 @@
 
                         <ImageView
                             android:id="@+id/imageView125"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="TODO"
-                            app:srcCompat="@drawable/cloudy" />
+                            app:srcCompat="@drawable/iic_cloudy" />
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/temp1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="21°"
                             android:textAlignment="center" />
 
                     </LinearLayout>
+
                     <View
-                        android:layout_width="2dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="153dp"
-                        android:background="#e6e6e6" />
+                        android:layout_marginTop="4dp"
+                        android:layout_width="2px"
+                        android:background="@color/blue"
+                        android:layout_height="80dp"
+                        />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        >
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -186,34 +195,34 @@
 
                         <ImageView
                             android:id="@+id/imageView27"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="TODO"
                             app:srcCompat="@drawable/stormy" />
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/temp2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="36°"
                             android:textAlignment="center" />
 
                     </LinearLayout>
+
                     <View
-                        android:layout_width="2dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="153dp"
-                        android:background="#e6e6e6" />
+                        android:layout_marginTop="4dp"
+                        android:layout_width="2px"
+                        android:background="@color/blue"
+                        android:layout_height="80dp"
+                        />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        >
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -222,26 +231,33 @@
 
                         <ImageView
                             android:id="@+id/imageView28"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="TODO"
-                            app:srcCompat="@drawable/cloudy" />
+                            app:srcCompat="@drawable/iic_cloudy" />
 
+                        <TextView
+                            android:id="@+id/temp3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <View
-                        android:layout_width="2dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginBottom="153dp"
-                        android:background="#e6e6e6" />
+                        android:layout_marginTop="4dp"
+                        android:layout_width="2px"
+                        android:background="@color/blue"
+                        android:layout_height="80dp"
+                        />
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:paddingLeft="5dp"
-                        android:paddingRight="20dp">
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -250,19 +266,32 @@
 
                         <ImageView
                             android:id="@+id/imageView29"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="TODO"
-                            app:srcCompat="@drawable/cloudy" />
+                            app:srcCompat="@drawable/iic_cloudy" />
 
+                        <TextView
+                            android:id="@+id/temp4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
-
+                    <View
+                        android:layout_marginTop="4dp"
+                        android:layout_width="2px"
+                        android:background="@color/blue"
+                        android:layout_height="80dp"
+                        />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -271,19 +300,27 @@
 
                         <ImageView
                             android:id="@+id/imageView30"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="TODO"
                             app:srcCompat="@drawable/snowy" />
 
+                        <TextView
+                            android:id="@+id/temp5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -292,19 +329,27 @@
 
                         <ImageView
                             android:id="@+id/imageView31"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="TODO"
                             app:srcCompat="@drawable/cloudy_sunny" />
 
+                        <TextView
+                            android:id="@+id/temp6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -313,19 +358,55 @@
 
                         <ImageView
                             android:id="@+id/imageView32"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:contentDescription="TODO"
-                            app:srcCompat="@drawable/cloudy" />
+                            app:srcCompat="@drawable/iic_cloudy" />
 
+                        <TextView
+                            android:id="@+id/temp7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="08:00" />
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            tools:srcCompat="@drawable/stormy" />
+
+                        <TextView
+                            android:id="@+id/temp8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -333,19 +414,26 @@
                             android:text="09:00" />
 
                         <ImageView
-                            android:id="@+id/imageView10"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            tools:srcCompat="@drawable/stormy" />
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -354,18 +442,25 @@
 
                         <ImageView
                             android:id="@+id/imageView11"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -373,95 +468,129 @@
                             android:text="11:00" />
 
                         <ImageView
-                            android:id="@+id/imageView12"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="12:00" />
 
                         <ImageView
-                            android:id="@+id/imageView13"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="13:00" />
 
                         <ImageView
-                            android:id="@+id/imageView14"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="14:00" />
 
                         <ImageView
-                            android:id="@+id/imageView15"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="15:00" />
 
                         <ImageView
-                            android:id="@+id/imageView16"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/temp15"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
-
                     <LinearLayout
+                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -469,39 +598,51 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="16:00" />
 
                         <ImageView
-                            android:id="@+id/imageView17"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="wrap_content"
+                        android:gravity="center"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:paddingRight="20dp">
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="17:00" />
 
                         <ImageView
-                            android:id="@+id/imageView18"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
-
                     <LinearLayout
+                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -509,19 +650,25 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="18:00" />
 
                         <ImageView
-                            android:id="@+id/imageView19"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
-
                     <LinearLayout
+                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -529,19 +676,25 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="19:00" />
 
                         <ImageView
-                            android:id="@+id/imageView20"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
-
                     <LinearLayout
+                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -549,19 +702,25 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="20:00" />
 
                         <ImageView
-                            android:id="@+id/imageView21"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
-
                     <LinearLayout
+                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -569,19 +728,25 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="21:00" />
 
                         <ImageView
-                            android:id="@+id/imageView22"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
-
                     <LinearLayout
+                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -589,35 +754,47 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="22:00" />
 
                         <ImageView
-                            android:id="@+id/imageView23"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
-
                     <LinearLayout
+                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:paddingRight="20dp">
+                        >
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="wrap_content"
                             android:text="23:00" />
 
                         <ImageView
-                            android:id="@+id/imageView24"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView11"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
+                        <TextView
+                            android:id="@+id/temp23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="21°"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
 
@@ -647,12 +824,18 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/monday_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13°"
+                        android:textAlignment="center" />
 
                     <ImageView
                         android:id="@+id/imageView2"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        app:srcCompat="@drawable/cloudy" />
+                        app:srcCompat="@drawable/iic_cloudy" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -667,6 +850,12 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tuesday_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13°"
+                        android:textAlignment="center" />
 
                     <ImageView
                         android:id="@+id/imageView"
@@ -687,6 +876,12 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/wednesday_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13°"
+                        android:textAlignment="center" />
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -707,6 +902,12 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/thursday_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13°"
+                        android:textAlignment="center" />
 
                     <ImageView
                         android:id="@+id/imageView4"
@@ -727,6 +928,12 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/friday_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13°"
+                        android:textAlignment="center" />
 
                     <ImageView
                         android:id="@+id/imageView5"
@@ -747,6 +954,12 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/saturday_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13°"
+                        android:textAlignment="center" />
 
                     <ImageView
                         android:id="@+id/imageView6"
@@ -767,6 +980,12 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/sunday_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13°"
+                        android:textAlignment="center" />
 
                     <ImageView
                         android:id="@+id/imageView7"

@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">ByWeather</string>
+    <string name="temp0">1°</string>
+    <string name="temp1">1°</string>
+    <string name="temp2">1°</string>
+    <string name="temp3">1°</string>
+    <string name="temp4">1°</string>
+    <string name="temp5">1°</string>
+    <string name="temp6">1°</string>
+    <string name="temp7">1°</string>
+    <string name="temp8">1°</string>
+    <string name="temp9">1°</string>
+    <string name="temp10">1°</string>
+    <string name="temp11">1°</string>
+    <string name="temp12">1°</string>
+    <string name="temp13">1°</string>
+    <string name="temp14">1°</string>
+    <string name="temp15">1°</string>
+    <string name="temp16">1°</string>
+    <string name="temp17">1°</string>
+    <string name="temp18">1°</string>
+    <string name="temp19">1°</string>
+    <string name="temp20">1°</string>
+    <string name="temp21">1°</string>
+    <string name="temp22">1°</string>
+    <string name="temp23">1°</string>
+
 </resources>
