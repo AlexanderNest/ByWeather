@@ -27,28 +27,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         try {
-            this.update_weather();
+            this.update_weather(); // обновление погоды и доп информации на экране
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
     }
 
-    private String weatherInJSON = null;
+    private String weatherInJSON = null;  // тут лежит полученная погода в json
 
-    public void update_weather_btn(View view){
+    public void update_weather_btn(View view){ // обработчик нажатия клавиши обновления погоды
         try {
             this.update_weather();
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
-    public void update_weather() throws JSONException {
+    public void update_weather() throws JSONException { // обновление погоды и доп информации на экране
 
-        Weather w = new Weather();
+        Weather w = new Weather(); // получаем погоду
         w.execute();
 
-        while (weatherInJSON == null){
+        while (weatherInJSON == null){  // ждем пока погода придет
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
@@ -56,14 +56,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        int fact_temp;
+        int fact_temp;  // фактическая температура
 
-        JSONObject weatherObject = new JSONObject(weatherInJSON);
-        JSONObject fact = weatherObject.getJSONObject("fact");
+        JSONObject weatherObject = new JSONObject(weatherInJSON);  // погода в JSON
+        JSONObject fact = weatherObject.getJSONObject("fact"); // JSON object fact
 
         fact_temp = fact.getInt("temp");
+
         TextView fact_temp_view = findViewById(R.id.fact_temp);
-        fact_temp_view.setText(String.valueOf(fact_temp) + "°");
+        fact_temp_view.setText(String.valueOf(fact_temp) + "°");  // вывод температуры на экран
 
 
 
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 
-    class Weather extends AsyncTask<Void, Void, Void> {
+    class Weather extends AsyncTask<Void, Void, Void> {  // получение погоды в фоне
 
         @Override
         protected void onPreExecute() {
