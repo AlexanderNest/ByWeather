@@ -96,9 +96,9 @@ public class MainActivity extends AppCompatActivity {
         min_max_view.setText(String.valueOf(max_temp) + "°/" + String.valueOf(min_temp) + "°");
 
         Toast toast = Toast.makeText(getApplicationContext(),
-                String.valueOf("loh" + prec_mm), Toast.LENGTH_SHORT);
+                String.valueOf(""), Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP, 0, 0);
-        toast.show();
+        //toast.show();
     }
 
     class Weather extends AsyncTask<Void, Void, Void> {  // получение погоды в фоне
