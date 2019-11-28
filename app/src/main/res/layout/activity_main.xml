@@ -129,7 +129,7 @@
                         android:id="@+id/imageView2"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        app:srcCompat="@drawable/iic_cloudy" />
+                        app:srcCompat="@drawable/ic_cloudy" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -429,7 +429,7 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:contentDescription="TODO"
-                                    app:srcCompat="@drawable/iic_cloudy" />
+                                    app:srcCompat="@drawable/ic_cloudy" />
 
                                 <TextView
                                     android:id="@+id/temp1"
@@ -501,7 +501,7 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:contentDescription="TODO"
-                                    app:srcCompat="@drawable/iic_cloudy" />
+                                    app:srcCompat="@drawable/ic_cloudy" />
 
                                 <TextView
                                     android:id="@+id/temp3"
@@ -536,7 +536,7 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:contentDescription="TODO"
-                                    app:srcCompat="@drawable/iic_cloudy" />
+                                    app:srcCompat="@drawable/ic_cloudy" />
 
                                 <TextView
                                     android:id="@+id/temp4"
@@ -640,7 +640,7 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:contentDescription="TODO"
-                                    app:srcCompat="@drawable/iic_cloudy" />
+                                    app:srcCompat="@drawable/ic_cloudy" />
 
                                 <TextView
                                     android:id="@+id/temp7"
