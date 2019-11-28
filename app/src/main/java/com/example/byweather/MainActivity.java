@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -56,20 +57,46 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        int fact_temp;  // фактическая температура
+
 
         JSONObject weatherObject = new JSONObject(weatherInJSON);  // погода в JSON
+
         JSONObject fact = weatherObject.getJSONObject("fact"); // JSON object fact
 
-        fact_temp = fact.getInt("temp");
+        int fact_temp = fact.getInt("temp"); // фактическая температура
+        int fact_wind_speed = fact.getInt("wind_speed");  // фактическая скорость ветра
+        int fact_humidity = fact.getInt("humidity");
+
+        TextView fact_humidity_view = findViewById(R.id.humidity);
+        fact_humidity_view.setText(String.valueOf(fact_humidity) + " %");  // вывод температуры на экран
 
         TextView fact_temp_view = findViewById(R.id.fact_temp);
         fact_temp_view.setText(String.valueOf(fact_temp) + "°");  // вывод температуры на экран
 
+        TextView fact_wind_speed_view = findViewById(R.id.fact_wind_speed);
+        fact_wind_speed_view.setText(String.valueOf(fact_wind_speed) + " m/s");
 
+
+        JSONArray forecast = weatherObject.getJSONArray("forecasts");
+        JSONObject f = (JSONObject)forecast.get(0);
+        JSONObject parts = f.getJSONObject("parts");
+        JSONObject day_forecasts = parts.getJSONObject("day");
+        JSONObject night_forecasts = parts.getJSONObject("night");
+
+        System.out.println(night_forecasts.toString());
+
+        int prec_mm = night_forecasts.getInt("prec_mm"); // ожидаемые осадки
+        int min_temp = night_forecasts.getInt("temp_min");  // ожидаемая минимальная температура
+        int max_temp = day_forecasts.getInt("temp_min");  // ожидаемая максимальная температура
+
+        TextView prec_mm_view = findViewById(R.id.prec_mm);
+        prec_mm_view.setText(String.valueOf(prec_mm) + " mm");
+
+        TextView min_max_view = findViewById(R.id.min_max_temp);
+        min_max_view.setText(String.valueOf(max_temp) + "°/" + String.valueOf(min_temp) + "°");
 
         Toast toast = Toast.makeText(getApplicationContext(),
-                "Информация о погоде обновлена", Toast.LENGTH_SHORT);
+                String.valueOf("loh" + prec_mm), Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();
     }
@@ -109,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast toast = Toast.makeText(getApplicationContext(),
                                 response.toString(), Toast.LENGTH_LONG);
                         toast.setGravity(Gravity.TOP, 0, 0);
-                        toast.show();
+                        //toast.show();
                     }
                 });
             }

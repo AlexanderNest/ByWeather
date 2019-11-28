@@ -355,10 +355,8 @@
                         android:id="@+id/horizontalScrollView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-
-
-                        android:paddingRight="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
                         android:scrollbars="none"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -1191,10 +1189,10 @@
                                 app:srcCompat="@drawable/ic_prec_mm" />
 
                             <TextView
-
+                                android:id="@+id/prec_mm"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0 mm"
+                                android:text="11 mm"
                                 android:textColor="@color/violet"/>
 
                         </LinearLayout>
@@ -1213,7 +1211,7 @@
                                 app:srcCompat="@drawable/ic_min_max" />
 
                             <TextView
-
+                                android:id="@+id/min_max_temp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="32°/18°"
@@ -1234,7 +1232,7 @@
                                 app:srcCompat="@drawable/ic_wind_speed" />
 
                             <TextView
-
+                                android:id="@+id/fact_wind_speed"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="6 m/s"
@@ -1255,7 +1253,7 @@
                                 app:srcCompat="@drawable/ic_humidity" />
 
                             <TextView
-
+                                android:id="@+id/humidity"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="10%"
