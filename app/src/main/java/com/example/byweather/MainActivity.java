@@ -1,16 +1,23 @@
 package com.example.byweather;
 
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,16 +26,51 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        try {
+            this.update_weather();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    public void update_weather(View view){
+    private String weatherInJSON = null;
+
+    public void update_weather_btn(View view){
+        try {
+            this.update_weather();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+    public void update_weather() throws JSONException {
+
+        Weather w = new Weather();
+        w.execute();
+
+        while (weatherInJSON == null){
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        int fact_temp;
+
+        JSONObject weatherObject = new JSONObject(weatherInJSON);
+        JSONObject fact = weatherObject.getJSONObject("fact");
+
+        fact_temp = fact.getInt("temp");
+        TextView fact_temp_view = findViewById(R.id.fact_temp);
+        fact_temp_view.setText(String.valueOf(fact_temp) + "°");
+
+
+
         Toast toast = Toast.makeText(getApplicationContext(),
                 "Информация о погоде обновлена", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();
-
-        Weather w = new Weather();
-        w.execute();
     }
 
     class Weather extends AsyncTask<Void, Void, Void> {
@@ -59,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 in.close();
 
-                System.out.println(response.toString());
+                weatherInJSON = response.toString();
+
                 runOnUiThread(new Runnable() {
                     public void run() {
                         Toast toast = Toast.makeText(getApplicationContext(),
