@@ -10,6 +10,7 @@
     >
 
 
+
     <ScrollView
 
         android:id="@+id/scrollView2"
@@ -27,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="20dp">
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -39,316 +40,353 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
-
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/ic_location"
                     android:onClick="update_weather_btn" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <FrameLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingLeft="-32dp">
+                    >
 
-
-                    <TextView
-                        android:layout_marginRight="10dp"
-                        android:id="@+id/curent_date"
-                        android:layout_width="wrap_content"
+                    <View
+                        android:layout_width="550dp"
+                        android:layout_height="550dp"
+                        android:layout_marginTop="-185dp"
+                        android:layout_marginBottom="-200dp"
+                        android:background="@drawable/ic_sun"></View>
+                    <LinearLayout
+                        android:paddingLeft="85dp"
+                        android:paddingTop="10dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_light"
-                        android:text="06.11.2019"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
 
-                    <TextView
-                        android:layout_marginRight="10dp"
-                        android:id="@+id/current_location"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="Москва"
-                        android:textColor="@color/white"
-                        android:textSize="36sp" />
 
-                    <TextView
-                        android:id="@+id/fact_temp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_thin"
-                        android:text="17°"
-                        android:textColor="@color/white"
-                        android:textSize="64sp" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/curent_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_light"
+                            android:text="06.11.2019"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/current_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Москва"
+                            android:textColor="@color/white"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/fact_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_thin"
+                            android:text="17°"
+                            android:textColor="@color/white"
+                            android:textSize="64sp" />
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
             </LinearLayout>
+
             <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-
-
-                    <LinearLayout
-                android:layout_marginTop="80dp"
-                android:id="@+id/linearLayout4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:paddingBottom="20dp"
-                        android:paddingTop="160dp"
                 android:layout_weight="1"
-                android:background="@drawable/yellow_radius_angles"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/monday_temp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="13°"
-                        android:textAlignment="center"
-                        android:textColor="@color/violet"/>
-
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@drawable/dash_line"
-                        android:rotation="90" />
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        app:srcCompat="@drawable/ic_cloudy" />
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ПН"
-                        android:textColor="@color/violet"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/tuesday_temp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="13°"
-                        android:textAlignment="center"
-                        android:textColor="@color/violet"/>
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@drawable/dash_line"
-                        android:rotation="90" />
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        app:srcCompat="@drawable/ic_cloudy" />
-
-                    <TextView
-                        android:id="@+id/textView933"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ВТ"
-                        android:textColor="@color/violet"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/wednesday_temp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="13°"
-                        android:textAlignment="center"
-                        android:textColor="@color/violet"/>
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@drawable/dash_line"
-                        android:rotation="90" />
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        app:srcCompat="@drawable/ic_cloudy" />
-
-                    <TextView
-                        android:id="@+id/textView649"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="СР"
-                        android:textColor="@color/violet"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/thursday_temp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="13°"
-                        android:textAlignment="center"
-                        android:textColor="@color/violet"/>
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@drawable/dash_line"
-                        android:rotation="90" />
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/textView9134"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ЧТ"
-                        android:textColor="@color/violet"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/friday_temp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="13°"
-                        android:textAlignment="center"
-                        android:textColor="@color/violet"/>
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@drawable/dash_line"
-                        android:rotation="90" />
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        app:srcCompat="@drawable/ic_cloudy" />
-
-                    <TextView
-                        android:id="@+id/textView9123"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ПТ"
-                        android:textColor="@color/violet"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/saturday_temp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="13°"
-                        android:textAlignment="center"
-                        android:textColor="@color/violet"/>
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@drawable/dash_line"
-                        android:rotation="90" />
-                    <ImageView
-                        android:id="@+id/imageView6"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/textView239"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="СБ"
-                        android:textColor="@color/violet"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/sunday_temp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="13°"
-                        android:textAlignment="center"
-                        android:textColor="@color/violet"/>
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@drawable/dash_line"
-                        android:rotation="90" />
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        app:srcCompat="@drawable/ic_cloudy" />
-
-                    <TextView
-                        android:id="@+id/textView91"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ВС"
-                        android:textColor="@color/violet"/>
-                </LinearLayout>
-            </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="215dp"
-                        android:background="@drawable/purple_radius_angles"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginRight="10dp"></View>
-
-                    <LinearLayout
+                    android:id="@+id/linearLayout4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_radius_angles"
-                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/yellow_radius_angles"
+                    android:orientation="horizontal"
+                    android:paddingTop="160dp"
+                    android:paddingBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/monday_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13°"
+                            android:textAlignment="center"
+                            android:textColor="@color/violet" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/dash_line"
+                            android:rotation="90" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:srcCompat="@drawable/ic_cloudy" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ПН"
+                            android:textColor="@color/violet" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tuesday_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13°"
+                            android:textAlignment="center"
+                            android:textColor="@color/violet" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/dash_line"
+                            android:rotation="90" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:srcCompat="@drawable/ic_cloudy" />
+
+                        <TextView
+                            android:id="@+id/textView933"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ВТ"
+                            android:textColor="@color/violet" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/wednesday_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13°"
+                            android:textAlignment="center"
+                            android:textColor="@color/violet" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/dash_line"
+                            android:rotation="90" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:srcCompat="@drawable/ic_cloudy" />
+
+                        <TextView
+                            android:id="@+id/textView649"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="СР"
+                            android:textColor="@color/violet" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/thursday_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13°"
+                            android:textAlignment="center"
+                            android:textColor="@color/violet" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/dash_line"
+                            android:rotation="90" />
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/textView9134"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ЧТ"
+                            android:textColor="@color/violet" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/friday_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13°"
+                            android:textAlignment="center"
+                            android:textColor="@color/violet" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/dash_line"
+                            android:rotation="90" />
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:srcCompat="@drawable/ic_cloudy" />
+
+                        <TextView
+                            android:id="@+id/textView9123"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ПТ"
+                            android:textColor="@color/violet" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/saturday_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13°"
+                            android:textAlignment="center"
+                            android:textColor="@color/violet" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/dash_line"
+                            android:rotation="90" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/textView239"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="СБ"
+                            android:textColor="@color/violet" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/sunday_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13°"
+                            android:textAlignment="center"
+                            android:textColor="@color/violet" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/dash_line"
+                            android:rotation="90" />
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:srcCompat="@drawable/ic_cloudy" />
+
+                        <TextView
+                            android:id="@+id/textView91"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ВС"
+                            android:textColor="@color/violet" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="211dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/purple_radius_angles"
+                    android:paddingTop="100dp"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:background="@drawable/white_radius_angles"
+                    android:orientation="vertical"
                     android:paddingBottom="20dp">
 
                     <HorizontalScrollView
@@ -383,8 +421,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="00:00"
-                                    />
+                                    android:text="00:00" />
 
                                 <ImageView
                                     android:id="@+id/imageView25"
@@ -405,11 +442,10 @@
 
 
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -441,11 +477,10 @@
                             </LinearLayout>
 
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -477,11 +512,10 @@
                             </LinearLayout>
 
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -512,11 +546,10 @@
                             </LinearLayout>
 
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -547,11 +580,10 @@
                             </LinearLayout>
 
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -580,12 +612,12 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
 
 
                             <LinearLayout
@@ -617,11 +649,11 @@
                             </LinearLayout>
 
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -651,11 +683,11 @@
                             </LinearLayout>
 
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -682,12 +714,12 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -715,12 +747,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -747,12 +780,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -779,12 +813,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -811,12 +846,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -843,12 +879,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -875,12 +912,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -907,12 +945,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -939,12 +978,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -971,12 +1011,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1003,12 +1044,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1035,12 +1077,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1067,12 +1110,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1099,12 +1143,13 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1131,20 +1176,20 @@
                                     android:text="21°"
                                     android:textAlignment="center" />
                             </LinearLayout>
+
                             <View
-                                android:layout_marginTop="4dp"
                                 android:layout_width="2px"
-                                android:background="@color/blue"
                                 android:layout_height="80dp"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:background="@color/blue" />
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:orientation="vertical"
                                 android:paddingLeft="5dp"
-                                android:paddingRight="5dp"
-                                >
+                                android:paddingRight="5dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -1172,15 +1217,14 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
+
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:layout_weight="1"
                             android:gravity="center"
-                            >
+                            android:orientation="vertical">
 
                             <ImageView
 
@@ -1193,16 +1237,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="11 mm"
-                                android:textColor="@color/violet"/>
+                                android:textColor="@color/violet" />
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:layout_weight="1"
                             android:gravity="center"
-                            >
+                            android:orientation="vertical">
 
                             <ImageView
 
@@ -1215,15 +1259,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="32°/18°"
-                                android:textColor="@color/violet"/>
+                                android:textColor="@color/violet" />
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:layout_weight="1"
-                            android:gravity="center">
+                            android:gravity="center"
+                            android:orientation="vertical">
 
                             <ImageView
 
@@ -1236,15 +1281,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="6 m/s"
-                                android:textColor="@color/violet"/>
+                                android:textColor="@color/violet" />
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:layout_weight="1"
-                            android:gravity="center">
+                            android:gravity="center"
+                            android:orientation="vertical">
 
                             <ImageView
 
@@ -1257,7 +1303,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="10%"
-                                android:textColor="@color/violet"/>
+                                android:textColor="@color/violet" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -1266,11 +1312,7 @@
                 </LinearLayout>
 
 
-
-
             </FrameLayout>
-
-
 
 
         </LinearLayout>
