@@ -1,10 +1,14 @@
 package com.example.byweather;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.HorizontalScrollView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setView(R.layout.dialog_info);
+        AlertDialog alert = builder.create();
+        alert.show();
+
     }
 
     private String weatherInJSON = null;  // тут лежит полученная погода в json
@@ -44,7 +53,10 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void update_weather() throws JSONException { // обновление погоды и доп информации на экране
+    public void update_weather() throws JSONException {
+        /*
+         *  обновление погоды и доп информации на экране
+         */
 
         Weather w = new Weather(); // получаем погоду
         w.execute();
@@ -56,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-
 
 
         JSONObject weatherObject = new JSONObject(weatherInJSON);  // погода в JSON
@@ -169,6 +180,14 @@ public class MainActivity extends AppCompatActivity {
 
         TextView current_date = findViewById(R.id.current_date);
         current_date.setText(date);
+
+        //прокрутка погоды дня до текущего времени
+
+        HorizontalScrollView day_temp = findViewById(R.id.day_temp);
+
+
+        day_temp.scrollTo(1000, 0);
+
 
 
 
