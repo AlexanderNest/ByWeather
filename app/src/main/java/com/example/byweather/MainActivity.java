@@ -17,7 +17,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -95,11 +95,92 @@ public class MainActivity extends AppCompatActivity {
         TextView min_max_view = findViewById(R.id.min_max_temp);
         min_max_view.setText(String.valueOf(max_temp) + "°/" + String.valueOf(min_temp) + "°");
 
-        Toast toast = Toast.makeText(getApplicationContext(),
-                String.valueOf(""), Toast.LENGTH_SHORT);
+
+
+
+        ArrayList<Integer> forecastsTemp = new ArrayList<Integer>(); // температура на день почасовая
+
+        JSONArray hours = f.getJSONArray("hours");
+
+        for (int i = 0; i <= 23; i++){
+            JSONObject hour;
+            hour = (JSONObject) hours.get(i);
+            int temp = hour.getInt("temp");
+            forecastsTemp.add(temp);
+        }
+
+
+        // установка почасовой температуры на графическом интерфейсе
+
+        TextView temp;
+        temp = findViewById(R.id.temp0);
+        temp.setText(forecastsTemp.get(0) + "°");
+        temp = findViewById(R.id.temp1);
+        temp.setText(forecastsTemp.get(1) + "°");
+        temp = findViewById(R.id.temp2);
+        temp.setText(forecastsTemp.get(2) + "°");
+        temp = findViewById(R.id.temp3);
+        temp.setText(forecastsTemp.get(3) + "°");
+        temp = findViewById(R.id.temp4);
+        temp.setText(forecastsTemp.get(4) + "°");
+        temp = findViewById(R.id.temp5);
+        temp.setText(forecastsTemp.get(5) + "°");
+        temp = findViewById(R.id.temp6);
+        temp.setText(forecastsTemp.get(6) + "°");
+        temp = findViewById(R.id.temp7);
+        temp.setText(forecastsTemp.get(7) + "°");
+        temp = findViewById(R.id.temp8);
+        temp.setText(forecastsTemp.get(8) + "°");
+        temp = findViewById(R.id.temp9);
+        temp.setText(forecastsTemp.get(9) + "°");
+        temp = findViewById(R.id.temp10);
+        temp.setText(forecastsTemp.get(10) + "°");
+        temp = findViewById(R.id.temp11);
+        temp.setText(forecastsTemp.get(11) + "°");
+        temp = findViewById(R.id.temp12);
+        temp.setText(forecastsTemp.get(12) + "°");
+        temp = findViewById(R.id.temp13);
+        temp.setText(forecastsTemp.get(13) + "°");
+        temp = findViewById(R.id.temp14);
+        temp.setText(forecastsTemp.get(14) + "°");
+        temp = findViewById(R.id.temp15);
+        temp.setText(forecastsTemp.get(15) + "°");
+        temp = findViewById(R.id.temp16);
+        temp.setText(forecastsTemp.get(16) + "°");
+        temp = findViewById(R.id.temp17);
+        temp.setText(forecastsTemp.get(17) + "°");
+        temp = findViewById(R.id.temp18);
+        temp.setText(forecastsTemp.get(18) + "°");
+        temp = findViewById(R.id.temp19);
+        temp.setText(forecastsTemp.get(19) + "°");
+        temp = findViewById(R.id.temp20);
+        temp.setText(forecastsTemp.get(20) + "°");
+        temp = findViewById(R.id.temp21);
+        temp.setText(forecastsTemp.get(21) + "°");
+        temp = findViewById(R.id.temp22);
+        temp.setText(forecastsTemp.get(22) + "°");
+        temp = findViewById(R.id.temp23);
+        temp.setText(forecastsTemp.get(23) + "°");
+
+
+        // установка текущей даты
+        String date = weatherObject.getString("now_dt");
+        date = date.substring(0, date.indexOf("T"));
+
+        TextView current_date = findViewById(R.id.current_date);
+        current_date.setText(date);
+
+
+
+
+
+        /*Toast toast = Toast.makeText(getApplicationContext(),
+                forecastsTemp.toString(), Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP, 0, 0);
-        //toast.show();
+        toast.show();*/
     }
+
+
 
     class Weather extends AsyncTask<Void, Void, Void> {  // получение погоды в фоне
 

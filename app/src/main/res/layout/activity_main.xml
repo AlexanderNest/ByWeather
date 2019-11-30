@@ -53,7 +53,7 @@
 
                     <TextView
                         android:layout_marginRight="10dp"
-                        android:id="@+id/curent_date"
+                        android:id="@+id/current_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_light"
@@ -85,7 +85,73 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="320dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="140dp"
+                    android:background="@drawable/white_radius_angles"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Стили на сегодня: "
+                        android:textColor="@color/violet"
+                        android:textSize="24sp"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            app:srcCompat="@drawable/man" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingRight="17dp">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:background="@drawable/button_yellow_angles"
+                                android:fontFamily="@font/roboto_light"
+
+                                android:text="Подробнее"
+                                android:textColor="@color/violet" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="52dp"
+                                android:background="@drawable/button_purple_angles"
+
+                                ></View>
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="216dp"
+                    android:background="@drawable/purple_radius_angles"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="215dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"></View>
 
                     <LinearLayout
                 android:layout_marginTop="80dp"
@@ -895,13 +961,12 @@
                                     android:text="15:00" />
 
                                 <ImageView
-                                    android:id="@+id/temp15"
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     tools:srcCompat="@tools:sample/avatars" />
 
                                 <TextView
-                                    android:id="@+id/textView6"
+                                    android:id="@+id/temp15"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="21°"
