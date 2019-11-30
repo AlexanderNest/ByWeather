@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout228"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/purple_border"
@@ -20,6 +20,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -140,13 +141,14 @@
             <Button
                 android:layout_width="150dp"
                 android:layout_height="20dp"
-                android:layout_marginLeft="139dp"
-                android:layout_marginTop="190dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="200dp"
                 android:background="@drawable/ic_vector"
                 android:fontFamily="@font/roboto_light"
+                android:onClick="close_dialog_info"
                 android:text="     нажмите, чтобы вернуться"
-                android:textAlignment="textStart"
 
+                android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textSize="10sp" />
         </FrameLayout>

@@ -1,14 +1,15 @@
 package com.example.byweather;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
 import android.view.Gravity;
 import android.view.View;
 import android.widget.HorizontalScrollView;
-import android.widget.ScrollView;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -36,15 +38,23 @@ public class MainActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setView(R.layout.dialog_info);
-        AlertDialog alert = builder.create();
-        alert.show();
-
     }
 
     private String weatherInJSON = null;  // тут лежит полученная погода в json
+
+    AlertDialog alert; // окно с подробной информацией о том, что надо надеть
+
+    public void close_dialog_info(View view){
+        this.alert.dismiss();
+    }
+
+    public void open_dialog_info(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setView(R.layout.dialog_info);
+        this.alert = builder.create();
+        this.alert.show();
+    }
+
 
     public void update_weather_btn(View view){ // обработчик нажатия клавиши обновления погоды
         try {

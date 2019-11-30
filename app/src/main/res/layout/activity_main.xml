@@ -8,6 +8,10 @@
     tools:context=".MainActivity"
 
     >
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/text"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="translucent_background"/>
 
 
     <ScrollView
@@ -136,6 +140,7 @@
                                     android:background="@drawable/button_yellow_angles"
                                     android:fontFamily="@font/roboto_light"
 
+                                    android:onClick="open_dialog_info"
                                     android:text="Подробнее"
                                     android:textColor="@color/violet" />
                                 <View
