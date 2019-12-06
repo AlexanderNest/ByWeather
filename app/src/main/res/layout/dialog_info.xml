@@ -9,7 +9,6 @@
         android:id="@+id/linearLayout228"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/purple_border"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="center"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="20dp"
                     android:text="Сегодня рекомендуется надеть:"
                     android:textSize="18sp"
                     android:typeface="sans" />
@@ -40,7 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingBottom="8dp">
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:id="@+id/textView2"
@@ -48,6 +47,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_regular"
                         android:gravity="center"
+                        android:paddingBottom="10dp"
                         android:text="Верхняя одежда:"
                         android:textSize="12sp" />
 
@@ -65,10 +65,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingBottom="8dp">
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:id="@+id/textView4"
+                        android:paddingBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_regular"
@@ -90,10 +91,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingBottom="8dp">
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:id="@+id/textView6"
+                        android:paddingBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_regular"
@@ -119,6 +121,7 @@
 
                     <TextView
                         android:id="@+id/textView8"
+                        android:paddingBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_regular"
@@ -138,19 +141,6 @@
             </LinearLayout>
 
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center|bottom"
-                android:layout_marginTop="200dp"
-                android:background="@drawable/ic_vector"
-                android:fontFamily="@font/roboto_light"
-                android:onClick="close_dialog_info"
-                android:text="     нажмите, чтобы вернуться"
-
-                android:textAlignment="textStart"
-                android:textAllCaps="false"
-                android:textSize="10sp" />
         </FrameLayout>
 
 

@@ -32,7 +32,6 @@
             <View
                 android:layout_width="422dp"
                 android:layout_height="422dp"
-                android:background="@drawable/ic_sun"
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="-170dp"/>
             <LinearLayout
@@ -44,6 +43,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingTop="15dp"
                     android:orientation="horizontal">
 
                     <Button
@@ -208,7 +208,7 @@
                                 android:id="@+id/imageView2"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
-                                app:srcCompat="@drawable/ic_cloudy" />
+                                 />
 
                             <TextView
                                 android:id="@+id/textView9"
@@ -240,7 +240,7 @@
                                 android:id="@+id/imageView"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
-                                app:srcCompat="@drawable/ic_cloudy" />
+                                 />
 
                             <TextView
                                 android:id="@+id/textView933"
@@ -272,7 +272,7 @@
                                 android:id="@+id/imageView3"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
-                                app:srcCompat="@drawable/ic_cloudy" />
+                                />
 
                             <TextView
                                 android:id="@+id/textView649"
@@ -336,7 +336,7 @@
                                 android:id="@+id/imageView5"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
-                                app:srcCompat="@drawable/ic_cloudy" />
+                                 />
 
                             <TextView
                                 android:id="@+id/textView9123"
@@ -400,7 +400,7 @@
                                 android:id="@+id/imageView7"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
-                                app:srcCompat="@drawable/ic_cloudy" />
+                                />
 
                             <TextView
                                 android:id="@+id/textView91"
@@ -466,11 +466,11 @@
                                         />
 
                                     <ImageView
-                                        android:id="@+id/imageView25"
+                                        android:id="@+id/icon0"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         android:contentDescription="TODO"
-                                        app:srcCompat="@drawable/ic_cloudy" />
+                                        />
 
                                     <TextView
                                         android:id="@+id/temp0"
@@ -504,11 +504,11 @@
                                         android:text="01:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView125"
+                                        android:id="@+id/icon1"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         android:contentDescription="TODO"
-                                        app:srcCompat="@drawable/ic_cloudy" />
+                                         />
 
                                     <TextView
                                         android:id="@+id/temp1"
@@ -540,11 +540,11 @@
                                         android:text="02:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView27"
+                                        android:id="@+id/icon2"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         android:contentDescription="TODO"
-                                        app:srcCompat="@drawable/ic_cloudy" />
+                                         />
 
                                     <TextView
                                         android:id="@+id/temp2"
@@ -576,11 +576,11 @@
                                         android:text="03:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView28"
+                                        android:id="@+id/icon3"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         android:contentDescription="TODO"
-                                        app:srcCompat="@drawable/ic_cloudy" />
+                                         />
 
                                     <TextView
                                         android:id="@+id/temp3"
@@ -611,11 +611,11 @@
                                         android:text="04:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView29"
+                                        android:id="@+id/icon4"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         android:contentDescription="TODO"
-                                        app:srcCompat="@drawable/ic_cloudy" />
+                                        />
 
                                     <TextView
                                         android:id="@+id/temp4"
@@ -646,11 +646,11 @@
                                         android:text="05:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView30"
+                                        android:id="@+id/icon5"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         android:contentDescription="TODO"
-                                        app:srcCompat="@drawable/ic_cloudy" />
+                                         />
 
                                     <TextView
                                         android:id="@+id/temp5"
@@ -681,11 +681,11 @@
                                         android:text="06:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView31"
+                                        android:id="@+id/icon6"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         android:contentDescription="TODO"
-                                        app:srcCompat="@drawable/ic_cloudy" />
+                                         />
 
                                     <TextView
                                         android:id="@+id/temp6"
@@ -715,11 +715,11 @@
                                         android:text="07:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView32"
+                                        android:id="@+id/icon7"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         android:contentDescription="TODO"
-                                        app:srcCompat="@drawable/ic_cloudy" />
+                                        />
 
                                     <TextView
                                         android:id="@+id/temp7"
@@ -749,7 +749,7 @@
                                         android:text="08:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView10"
+                                        android:id="@+id/icon8"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@drawable/stormy" />
@@ -782,7 +782,7 @@
                                         android:text="09:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon9"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -814,7 +814,7 @@
                                         android:text="10:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon10"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -846,7 +846,7 @@
                                         android:text="11:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon11"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -878,7 +878,7 @@
                                         android:text="12:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon12"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -910,7 +910,7 @@
                                         android:text="13:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon13"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -942,7 +942,7 @@
                                         android:text="14:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon14"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -974,6 +974,7 @@
                                         android:text="15:00" />
 
                                     <ImageView
+                                        android:id="@+id/icon15"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -1005,7 +1006,7 @@
                                         android:text="16:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon16"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -1037,7 +1038,7 @@
                                         android:text="17:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon17"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -1069,7 +1070,7 @@
                                         android:text="18:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon18"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -1101,7 +1102,7 @@
                                         android:text="19:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon19"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -1133,7 +1134,7 @@
                                         android:text="20:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon20"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -1165,7 +1166,7 @@
                                         android:text="21:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon21"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -1197,7 +1198,7 @@
                                         android:text="22:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon22"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />
@@ -1230,7 +1231,7 @@
                                         android:text="23:00" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
+                                        android:id="@+id/icon23"
                                         android:layout_width="48dp"
                                         android:layout_height="48dp"
                                         tools:srcCompat="@tools:sample/avatars" />

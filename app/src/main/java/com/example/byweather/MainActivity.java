@@ -4,12 +4,14 @@ import android.app.AlertDialog;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 import android.support.v7.app.AppCompatActivity;
 
 import android.view.Gravity;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageView v = findViewById(R.id.icon0);
+        v.setImageResource(R.drawable.ic_location);
 
         try {
             this.update_weather(); // обновление погоды и доп информации на экране
@@ -62,6 +67,65 @@ public class MainActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+   private int name_to_id(String name){
+        if (name.equals("clearsunny")){
+            return R.drawable.ic_clearsunny;
+        }
+        if (name.equals("overcast")){
+            return R.drawable.ic_overcast;
+        }
+        if (name.equals("overcast-thunderstorms-with-rain")){
+            return R.drawable.ic_overcast_thunderstorms_with_rain;
+        }
+        if (name.equals("cloudy-and-light-rain")){
+            return R.drawable.ic_cloudy_and_light_rain;
+        }
+        if (name.equals("overcast-and-light-rain")){
+            return R.drawable.ic_overcast_and_light_rain;
+        }
+        if (name.equals("partly-cloudy")){
+            return R.drawable.ic_partly_cloudy;
+        }
+        if (name.equals("cloudy-and-light-snow")){
+            return R.drawable.ic_cloudy_and_snow;
+        }
+        if (name.equals("overcast-and-light-snow")){
+            return R.drawable.ic_overcast_and_snow;
+        }
+        if (name.equals("partly-cloudy-and-light-rain")){
+            return R.drawable.ic_partly_cloudy_and_light_rain;
+        }
+        if (name.equals("cloudy-and-rain")){
+            return R.drawable.ic_cloudy_and_rain;
+        }
+        if (name.equals("overcast-and-rain")){
+            return R.drawable.ic_overcast_and_rain;
+        }
+        if (name.equals("partly-cloudy-and-light-snow")){
+            return R.drawable.ic_partly_cloudy_and_light_snow;
+        }
+        if (name.equals("cloudy-and-snow")){
+            return R.drawable.ic_cloudy_and_snow;
+        }
+        if (name.equals("overcast-and-snow")){
+            return R.drawable.ic_overcast_and_snow;
+        }
+        if (name.equals("partly-cloudy-and-rain")){
+            return R.drawable.ic_partly_cloudy_and_rain;
+        }
+        if (name.equals("cloudycloudy")){
+            return R.drawable.ic_cloudycloudy;
+        }
+        if (name.equals("overcast-and-wet-snow")){
+            return R.drawable.ic_overcast_and_wet_snow;
+        }
+        if (name.equals("partly-cloudy-and-snow")){
+            return R.drawable.ic_partly_cloudy_and_snow;
+        }
+
+        return R.drawable.ic_partly_cloudy_and_snow;
     }
     public void update_weather() throws JSONException {
         /*
@@ -104,8 +168,6 @@ public class MainActivity extends AppCompatActivity {
         JSONObject day_forecasts = parts.getJSONObject("day");
         JSONObject night_forecasts = parts.getJSONObject("night");
 
-        System.out.println(night_forecasts.toString());
-
         int prec_mm = night_forecasts.getInt("prec_mm"); // ожидаемые осадки
         int min_temp = night_forecasts.getInt("temp_min");  // ожидаемая минимальная температура
         int max_temp = day_forecasts.getInt("temp_min");  // ожидаемая максимальная температура
@@ -120,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<Integer> forecastsTemp = new ArrayList<Integer>(); // температура на день почасовая
+        ArrayList<String> forecasticons = new ArrayList<>();
 
         JSONArray hours = f.getJSONArray("hours");
 
@@ -127,13 +190,17 @@ public class MainActivity extends AppCompatActivity {
             JSONObject hour;
             hour = (JSONObject) hours.get(i);
             int temp = hour.getInt("temp");
+            String icon = hour.getString("condition");
             forecastsTemp.add(temp);
+            forecasticons.add(icon);
         }
 
 
         // установка почасовой температуры на графическом интерфейсе
 
         TextView temp;
+        ImageView icon;
+
         temp = findViewById(R.id.temp0);
         temp.setText(forecastsTemp.get(0) + "°");
         temp = findViewById(R.id.temp1);
@@ -183,6 +250,61 @@ public class MainActivity extends AppCompatActivity {
         temp = findViewById(R.id.temp23);
         temp.setText(forecastsTemp.get(23) + "°");
 
+        // установка иконок
+
+
+        icon = findViewById(R.id.icon0);
+        icon.setImageResource(this.name_to_id(forecasticons.get(0)));
+        icon = findViewById(R.id.icon1);
+        icon.setImageResource(this.name_to_id(forecasticons.get(1)));
+        icon = findViewById(R.id.icon2);
+        icon.setImageResource(this.name_to_id(forecasticons.get(2)));
+        icon = findViewById(R.id.icon3);
+        icon.setImageResource(this.name_to_id(forecasticons.get(3)));
+        icon = findViewById(R.id.icon4);
+        icon.setImageResource(this.name_to_id(forecasticons.get(4)));
+        icon = findViewById(R.id.icon5);
+        icon.setImageResource(this.name_to_id(forecasticons.get(5)));
+        icon = findViewById(R.id.icon6);
+        icon.setImageResource(this.name_to_id(forecasticons.get(6)));
+        icon = findViewById(R.id.icon7);
+        icon.setImageResource(this.name_to_id(forecasticons.get(7)));
+        icon = findViewById(R.id.icon8);
+        icon.setImageResource(this.name_to_id(forecasticons.get(8)));
+        icon = findViewById(R.id.icon9);
+        icon.setImageResource(this.name_to_id(forecasticons.get(9)));
+        icon = findViewById(R.id.icon10);
+        icon.setImageResource(this.name_to_id(forecasticons.get(10)));
+        icon = findViewById(R.id.icon11);
+        icon.setImageResource(this.name_to_id(forecasticons.get(11)));
+        icon = findViewById(R.id.icon12);
+        icon.setImageResource(this.name_to_id(forecasticons.get(12)));
+        icon = findViewById(R.id.icon13);
+        icon.setImageResource(this.name_to_id(forecasticons.get(13)));
+        icon = findViewById(R.id.icon14);
+        icon.setImageResource(this.name_to_id(forecasticons.get(14)));
+        icon = findViewById(R.id.icon15);
+        icon.setImageResource(this.name_to_id(forecasticons.get(15)));
+        icon = findViewById(R.id.icon16);
+        icon.setImageResource(this.name_to_id(forecasticons.get(16)));
+        icon = findViewById(R.id.icon17);
+        icon.setImageResource(this.name_to_id(forecasticons.get(17)));
+        icon = findViewById(R.id.icon18);
+        icon.setImageResource(this.name_to_id(forecasticons.get(18)));
+        icon = findViewById(R.id.icon19);
+        icon.setImageResource(this.name_to_id(forecasticons.get(19)));
+        icon = findViewById(R.id.icon20);
+        icon.setImageResource(this.name_to_id(forecasticons.get(20)));
+        icon = findViewById(R.id.icon21);
+        icon.setImageResource(this.name_to_id(forecasticons.get(21)));
+        icon = findViewById(R.id.icon22);
+        icon.setImageResource(this.name_to_id(forecasticons.get(22)));
+        icon = findViewById(R.id.icon23);
+        icon.setImageResource(this.name_to_id(forecasticons.get(23)));
+
+
+
+
 
         // установка текущей даты
         String date = weatherObject.getString("now_dt");
@@ -192,21 +314,33 @@ public class MainActivity extends AppCompatActivity {
         current_date.setText(date);
 
         //прокрутка погоды дня до текущего времени
-
+        //TODO доработать, рассчитать прокрутку
         HorizontalScrollView day_temp = findViewById(R.id.day_temp);
-
 
         day_temp.scrollTo(1000, 0);
 
+        // установка погоды на каждый день (второй блок)
+
+        ArrayList<Integer> temps_for_a_week = new ArrayList<Integer>();
+
+        for (int i = 0; i < 7; i++){
+            JSONObject day = (JSONObject) forecast.get(i);
+            System.out.println(day.toString());
+            parts = (JSONObject) day.getJSONObject("parts");
+            JSONObject day_short = parts.getJSONObject("day_short");
 
 
+            temps_for_a_week.add(day_short.getInt("temp"));
+        }
 
-
-
-        /*Toast toast = Toast.makeText(getApplicationContext(),
-                forecastsTemp.toString(), Toast.LENGTH_SHORT);
+/*
+        Toast toast = Toast.makeText(getApplicationContext(),
+                String.valueOf(day_short.getInt("temp")), Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();*/
+
+
+
     }
 
 
