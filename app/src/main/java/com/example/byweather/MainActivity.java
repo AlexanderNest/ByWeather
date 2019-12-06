@@ -25,7 +25,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-
+import java.util.Calendar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
         return R.drawable.ic_partly_cloudy_and_snow;
     }
+
     public void update_weather() throws JSONException {
         /*
          *  обновление погоды и доп информации на экране
@@ -321,18 +322,231 @@ public class MainActivity extends AppCompatActivity {
 
         // установка погоды на каждый день (второй блок)
 
-        ArrayList<Integer> temps_for_a_week = new ArrayList<Integer>();
+        ArrayList<String> temps_for_a_week = new ArrayList<>();
+        ArrayList<String> icons_for_a_week = new ArrayList<>();
 
         for (int i = 0; i < 7; i++){
             JSONObject day = (JSONObject) forecast.get(i);
-            System.out.println(day.toString());
             parts = (JSONObject) day.getJSONObject("parts");
             JSONObject day_short = parts.getJSONObject("day_short");
-
-
-            temps_for_a_week.add(day_short.getInt("temp"));
+            temps_for_a_week.add(String.valueOf(day_short.getInt("temp")) + "°");
+            icons_for_a_week.add(day_short.getString("condition"));
         }
 
+        Calendar c = Calendar.getInstance();
+        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+
+        if (dayOfWeek == 1){
+            temp = findViewById(R.id.monday_temp);
+            temp.setText(temps_for_a_week.get(0));
+            temp = findViewById(R.id.tuesday_temp);
+            temp.setText(temps_for_a_week.get(1));
+            temp = findViewById(R.id.wednesday_temp);
+            temp.setText(temps_for_a_week.get(2));
+            temp = findViewById(R.id.thursday_temp);
+            temp.setText(temps_for_a_week.get(3));
+            temp = findViewById(R.id.friday_temp);
+            temp.setText(temps_for_a_week.get(4));
+            temp = findViewById(R.id.saturday_temp);
+            temp.setText(temps_for_a_week.get(5));
+            temp = findViewById(R.id.sunday_temp);
+            temp.setText(temps_for_a_week.get(6));
+            icon = findViewById(R.id.monday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(0)));
+            icon = findViewById(R.id.tuesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(1)));
+            icon = findViewById(R.id.wednesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(2)));
+            icon = findViewById(R.id.thursday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(3)));
+            icon = findViewById(R.id.friday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(4)));
+            icon = findViewById(R.id.saturday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(5)));
+            icon = findViewById(R.id.sunday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(6)));
+        }
+        if (dayOfWeek == 2){
+            temp = findViewById(R.id.monday_temp);
+            temp.setText(temps_for_a_week.get(1));
+            temp = findViewById(R.id.tuesday_temp);
+            temp.setText(temps_for_a_week.get(2));
+            temp = findViewById(R.id.wednesday_temp);
+            temp.setText(temps_for_a_week.get(3));
+            temp = findViewById(R.id.thursday_temp);
+            temp.setText(temps_for_a_week.get(4));
+            temp = findViewById(R.id.friday_temp);
+            temp.setText(temps_for_a_week.get(5));
+            temp = findViewById(R.id.saturday_temp);
+            temp.setText(temps_for_a_week.get(6));
+            temp = findViewById(R.id.sunday_temp);
+            temp.setText(temps_for_a_week.get(0));
+            icon = findViewById(R.id.monday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(1)));
+            icon = findViewById(R.id.tuesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(2)));
+            icon = findViewById(R.id.wednesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(3)));
+            icon = findViewById(R.id.thursday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(4)));
+            icon = findViewById(R.id.friday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(5)));
+            icon = findViewById(R.id.saturday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(6)));
+            icon = findViewById(R.id.sunday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(0)));
+        }
+        if (dayOfWeek == 3){
+
+            temp = findViewById(R.id.monday_temp);
+            temp.setText(temps_for_a_week.get(2));
+            temp = findViewById(R.id.tuesday_temp);
+            temp.setText(temps_for_a_week.get(3));
+            temp = findViewById(R.id.wednesday_temp);
+            temp.setText(temps_for_a_week.get(4));
+            temp = findViewById(R.id.thursday_temp);
+            temp.setText(temps_for_a_week.get(5));
+            temp = findViewById(R.id.friday_temp);
+            temp.setText(temps_for_a_week.get(6));
+            temp = findViewById(R.id.saturday_temp);
+            temp.setText(temps_for_a_week.get(0));
+            temp = findViewById(R.id.sunday_temp);
+            temp.setText(temps_for_a_week.get(1));
+            icon = findViewById(R.id.monday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(2)));
+            icon = findViewById(R.id.tuesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(3)));
+            icon = findViewById(R.id.wednesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(4)));
+            icon = findViewById(R.id.thursday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(5)));
+            icon = findViewById(R.id.friday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(6)));
+            icon = findViewById(R.id.saturday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(0)));
+            icon = findViewById(R.id.sunday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(1)));
+        }
+        if (dayOfWeek == 4){
+            temp = findViewById(R.id.monday_temp);
+            temp.setText(temps_for_a_week.get(3));
+            temp = findViewById(R.id.tuesday_temp);
+            temp.setText(temps_for_a_week.get(4));
+            temp = findViewById(R.id.wednesday_temp);
+            temp.setText(temps_for_a_week.get(5));
+            temp = findViewById(R.id.thursday_temp);
+            temp.setText(temps_for_a_week.get(6));
+            temp = findViewById(R.id.friday_temp);
+            temp.setText(temps_for_a_week.get(0));
+            temp = findViewById(R.id.saturday_temp);
+            temp.setText(temps_for_a_week.get(1));
+            temp = findViewById(R.id.sunday_temp);
+            temp.setText(temps_for_a_week.get(2));
+            icon = findViewById(R.id.monday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(3)));
+            icon = findViewById(R.id.tuesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(4)));
+            icon = findViewById(R.id.wednesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(5)));
+            icon = findViewById(R.id.thursday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(6)));
+            icon = findViewById(R.id.friday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(0)));
+            icon = findViewById(R.id.saturday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(1)));
+            icon = findViewById(R.id.sunday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(2)));
+        }
+        if (dayOfWeek == 5){
+            temp = findViewById(R.id.monday_temp);
+            temp.setText(temps_for_a_week.get(4));
+            temp = findViewById(R.id.tuesday_temp);
+            temp.setText(temps_for_a_week.get(5));
+            temp = findViewById(R.id.wednesday_temp);
+            temp.setText(temps_for_a_week.get(6));
+            temp = findViewById(R.id.thursday_temp);
+            temp.setText(temps_for_a_week.get(0));
+            temp = findViewById(R.id.friday_temp);
+            temp.setText(temps_for_a_week.get(1));
+            temp = findViewById(R.id.saturday_temp);
+            temp.setText(temps_for_a_week.get(2));
+            temp = findViewById(R.id.sunday_temp);
+            temp.setText(temps_for_a_week.get(3));
+            icon = findViewById(R.id.monday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(4)));
+            icon = findViewById(R.id.tuesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(5)));
+            icon = findViewById(R.id.wednesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(6)));
+            icon = findViewById(R.id.thursday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(0)));
+            icon = findViewById(R.id.friday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(1)));
+            icon = findViewById(R.id.saturday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(2)));
+            icon = findViewById(R.id.sunday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(3)));
+        }
+        if (dayOfWeek == 6){
+            temp = findViewById(R.id.monday_temp);
+            temp.setText(temps_for_a_week.get(5));
+            temp = findViewById(R.id.tuesday_temp);
+            temp.setText(temps_for_a_week.get(6));
+            temp = findViewById(R.id.wednesday_temp);
+            temp.setText(temps_for_a_week.get(0));
+            temp = findViewById(R.id.thursday_temp);
+            temp.setText(temps_for_a_week.get(1));
+            temp = findViewById(R.id.friday_temp);
+            temp.setText(temps_for_a_week.get(2));
+            temp = findViewById(R.id.saturday_temp);
+            temp.setText(temps_for_a_week.get(3));
+            temp = findViewById(R.id.sunday_temp);
+            temp.setText(temps_for_a_week.get(4));
+            icon = findViewById(R.id.monday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(5)));
+            icon = findViewById(R.id.tuesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(6)));
+            icon = findViewById(R.id.wednesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(0)));
+            icon = findViewById(R.id.thursday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(1)));
+            icon = findViewById(R.id.friday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(2)));
+            icon = findViewById(R.id.saturday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(3)));
+            icon = findViewById(R.id.sunday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(4)));
+        }
+        if (dayOfWeek == 7){
+            temp = findViewById(R.id.monday_temp);
+            temp.setText(temps_for_a_week.get(6));
+            temp = findViewById(R.id.tuesday_temp);
+            temp.setText(temps_for_a_week.get(0));
+            temp = findViewById(R.id.wednesday_temp);
+            temp.setText(temps_for_a_week.get(1));
+            temp = findViewById(R.id.thursday_temp);
+            temp.setText(temps_for_a_week.get(2));
+            temp = findViewById(R.id.friday_temp);
+            temp.setText(temps_for_a_week.get(3));
+            temp = findViewById(R.id.saturday_temp);
+            temp.setText(temps_for_a_week.get(4));
+            temp = findViewById(R.id.sunday_temp);
+            temp.setText(temps_for_a_week.get(5));
+            icon = findViewById(R.id.monday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(6)));
+            icon = findViewById(R.id.tuesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(0)));
+            icon = findViewById(R.id.wednesday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(1)));
+            icon = findViewById(R.id.thursday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(2)));
+            icon = findViewById(R.id.friday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(3)));
+            icon = findViewById(R.id.saturday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(4)));
+            icon = findViewById(R.id.sunday_icon);
+            icon.setImageResource(this.name_to_id(icons_for_a_week.get(5)));
+        }
 /*
         Toast toast = Toast.makeText(getApplicationContext(),
                 String.valueOf(day_short.getInt("temp")), Toast.LENGTH_SHORT);
